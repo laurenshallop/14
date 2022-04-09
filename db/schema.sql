@@ -1,3 +1,5 @@
-DROP DATABASE IF EXISTS museum_db;
+-- check the backend mysql -u root -p
 
-CREATE DATABASE museum_db;
+DROP DATABASE IF EXISTS patient_db;
+
+CREATE DATABASE patient_db; 

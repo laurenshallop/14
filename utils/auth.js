@@ -1,13 +1,21 @@
+// withAuth confirms log-in status when using only session
 const withAuth = (req, res, next) => {
-  // If the user is not logged in, redirect the user to the login page
-  // This is directly from the `/gallery/:id` and `/painting/:id` routes
-  if (!req.session.loggedIn) {
+  if (!req.session.user_id) {
     res.redirect('/login');
   } else {
-    // If the user is logged in, execute the route function that will allow them to view the gallery
-    // We call next() if the user is authenticated
     next();
   }
 };
 
 module.exports = withAuth;
+
+
+// passportAuth verifies that a user is loggedin using session.passport instead of just session
+const passportAuth = (req, res, next) => {
+  if (req.user) {
+    return next();
+  }
+  return res.redirect('/');
+  };
+
+module.exports = passportAuth;
