@@ -18,8 +18,9 @@ const hbs = exphbs.create({helpers});
 // session (connects session to sequelize Database) --> authentication 
 const session = require('express-session');
 
-const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
+
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
