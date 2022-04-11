@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const { Op } = require('sequelize');
-// const withAuth = require('../utils/auth');   // -- search will not require login.
+//const withAuth = require('../utils/auth');   // -- search will not require login.
 
 // -- search sample for Insomnia  GET http://localhost:3001/search/heroku
 router.get('/:post_text', (req, res) => {

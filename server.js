@@ -16,7 +16,7 @@ const exphbs = require('express-handlebars');
 const hbs = exphbs.create({helpers});
 
 // session (connects session to sequelize Database) --> authentication 
-var app = express();
+//var app = express();
 app.use(require('serve-static')(__dirname + '/../../public'));
 //app.use(require('cookie-parser')());
 app.use(require('body-parser').urlencoded({ extended: true }));
@@ -25,6 +25,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+// //testing this out
+// passport.use(new LocalStrategy(
+//   function(username, password, done) {
+//     console.log('local strategy called with: %s', username);
+//     return done(null, {name: username});
+//   }));
 
 
 
@@ -32,7 +38,7 @@ app.use(passport.session());
 const session = require('express-session');
 
 const PORT = process.env.PORT || 3001;
-//const app = express();
+const app = express();
 
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
