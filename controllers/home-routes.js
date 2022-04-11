@@ -131,8 +131,7 @@ router.get('/profile/:id', (req, res) => {
       where: {
         id: req.params.id,
         username: req.body.username,
-        github: req.body.github,
-        linkedin: req.body.linkedin
+
       },
       include: [
         {
@@ -168,7 +167,7 @@ router.get('/profile/:id', (req, res) => {
           }
            
           // serialize the data
-          const user = { username: username, github: github, linkedin: linkedin}
+          const user = { username: username}
 
           // pass data to template
           res.render('single-profile', { user, loggedIn: loginStatus });

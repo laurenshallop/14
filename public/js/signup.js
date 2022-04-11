@@ -5,9 +5,7 @@ async function signupFormHandler(event) {
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    const github = document.querySelector('#github-signup').value.trim();
-    const linkedin = document.querySelector('#linkedin-signup').value.trim();
-    const bio = document.querySelector('#bio-signup').value.trim();
+
 
     
     if (username && email && password) {
@@ -17,9 +15,6 @@ async function signupFormHandler(event) {
             username,
             email,
             password,
-            github,
-            linkedin,
-            bio
           }),
           headers: { 'Content-Type': 'application/json' }
         }); 
