@@ -10,8 +10,8 @@ const { User } = require('../models');
 passport.use(new LocalStrategy(
   {
     usernameField: 'email',
-    passwordField: 'password',
-    passReqToCallback: true // allows us to pass back the entire request to the callback
+    // passwordField: 'password',
+    // passReqToCallback: true // allows us to pass back the entire request to the callback
   },
   
   async function(email, password, done) {

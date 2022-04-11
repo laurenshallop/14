@@ -1,7 +1,7 @@
 {
   "name": "museum-paintings",
   "version": "1.0.0",
-  "description": "",
+  "description": "Patient Care ## Description - A patient board where users can login in, comment and update others on the care their loved one is recieving. This application follows the MVC paradigm and uses Handlebars.js as the templating language, Sequelize as the ORM. For authentication of a user we used Passport.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,5 +25,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurenshallop/patient_care.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/laurenshallop/patient_care/issues"
+  },
+  "homepage": "https://github.com/laurenshallop/patient_care#readme"
 }
