@@ -6,4 +6,4 @@ Patient Care
 - Clone the repository from Github. The application requires Node.js, Express.js, Sequelize , mysql2, and connection-session/express-session. When cloning the repo, run npm i to run all modules. Connect to the database by running mysql -u root -p and entering the password. Source sb/schema.sql and run npm start.
 
 ## Contributing
-Contributors of this application include Lauren Shallop, 
+Contributors of this application include Lauren Shallop, Vishaal Prakash
