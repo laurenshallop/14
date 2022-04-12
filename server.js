@@ -16,9 +16,14 @@ const exphbs = require('express-handlebars');
 const hbs = exphbs.create({helpers});
 
 // session (connects session to sequelize Database) --> authentication 
-//var app = express();
-app.use(require('serve-static')(__dirname + '/../../public'));
-//app.use(require('cookie-parser')());
+
+
+
+//testing this out as well 
+var app = express();
+//app.use(require('serve-static')(__dirname + '/../../public'));
+app.use(express.static('public'));
+app.use(require('cookie-parser')());
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
@@ -38,7 +43,7 @@ app.use(passport.session());
 const session = require('express-session');
 
 const PORT = process.env.PORT || 3001;
-const app = express();
+//const app = express();
 
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
